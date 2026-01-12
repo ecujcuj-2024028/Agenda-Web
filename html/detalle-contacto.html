@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">
+                <i class="fas fa-address-card me-2"></i>
+                Detalles del contacto
+            </h4>
+        </div>
+
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <i class="fas fa-user me-2"></i>
+                    <strong>Nombre:</strong>
+                    <span id="nombre"></span>
+                </li>
+                <li class="list-group-item">
+                    <i class="fas fa-phone me-2"></i>
+                    <strong>Teléfono:</strong>
+                    <span id="telefono"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card-footer text-end">
+            <a href="contactos.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left me-1"></i> Volver
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nombre").textContent = params.get("nombre");
+    document.getElementById("telefono").textContent = params.get("telefono");
+</script>
+
+</body>
+</html>
