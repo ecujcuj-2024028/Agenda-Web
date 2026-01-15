@@ -74,3 +74,7 @@ h2 {
     box-shadow: none;
     border-color: #007bff;
 }
+
+.fa-sign-out-alt {
+    color: #4e4e4e;
+}
