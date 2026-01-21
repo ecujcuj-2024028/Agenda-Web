@@ -16,31 +16,33 @@
         <div class="card shadow " style="width: 22rem;"> 
             <div class="card-body p-4 "> 
                 <h4 class="card-title text-center mb-3">Inicio de Sesión</h4>
-                
                 <p class="card-subtitle mb-4 text-muted text-center">
                     Ingresa tus credenciales para continuar
                 </p>
                 
-                <form action="html/contactos.html">
-                    
+                <form id="loginForm" action="html/contactos.html">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                        <label for="emailInput">Correo Electrónico</label>
                     </div>
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                         <label for="floatingPassword">Contraseña</label>
                     </div>
 
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-outline-primary">
-                            Ingresar
-                        </button>
+                        <button type="submit" class="btn btn-outline-primary">Ingresar</button>
                     </div>
-
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function() {
+            const email = document.getElementById('emailInput').value;
+            localStorage.setItem('userEmail', email);
+        });
+    </script>
 </body>
 </html>
